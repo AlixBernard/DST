@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+storage="/home/alix/Master BDA/Storage Technologies/dst-stu/d"
+software="/home/alix/Master BDA/Storage Technologies/dst-stu/src"
+
+cat "$storage/f1.tsv" | sed -e 's/\(.*\)/\L\1/' | sed -r 's/[   ]+/\n/g' \
+	| sed -e 's/\([[:punct:]]\)//g' | sort | uniq -c | sort -nr \
+	| tee "$storage/out.tsv"

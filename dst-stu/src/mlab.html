@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DST</title>
+    <style>
+    * {
+			box-sizing:border-box;
+    }
+    html {
+			width:100%;
+			height:100%;
+			margin:0;
+			padding:0;
+    }
+    body {
+			margin:0;
+			width:100%;
+			height:100%;
+			display:flex;
+			flex-flow:column nowrap;
+			justify-items:center;
+			align-items:center;
+			justify-content:center;
+    }
+    main {
+    flex:0 0 auto;
+			width:800px;
+			display: flex;
+			flex-flow:column nowrap;
+    }
+    form {
+			flex:0 0 auto;
+			width:100%;
+			display: flex;
+			flex-flow:column nowrap;
+    }
+    label {
+			display:flex;
+			flex:1 1 auto;
+    }
+    code, input, textarea {
+			display:flex;
+			flex:1 1 auto;
+			margin:.5em 0;
+			border:solid 1px #666;
+			font-family:'Courier New',Courier,monospace;
+			padding:auto 1em;
+    }
+    code, textarea {
+			height:10em;
+			font-size:.75em;
+			overflow:auto;
+    }
+    input[type=button]{
+			text-align:center;
+			align-self:center;
+			cursor:pointer;
+    }
+    .ok {
+			background:green;
+			color:white;
+    }
+    .er {
+			background:red;
+			color:white;
+    }
+    </style>
+  </head>
+  <body>
+  
+  <main>
+		<code id="response" title="Response">
+		</code>
+		<form>
+			
+			<input type="text" name="method" id="method" placeholder="Method" title="Method">
+			<input type="text" name="url" id="url" placeholder="URL" title="URL">
+			<textarea name="data" id="data" placeholder="Data" title="Data"></textarea>
+			<input type="button" name="go" value="Send The Query" id="go">
+		</form>
+  </main>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  
+  $('input[type!=button],textarea').keyup(function(){
+		$('response').removeClass();
+  });
+  
+  $('#go').click(function(){
+  
+		var jqxhr = $.ajax({
+			method: $('#method').val().trim(),
+			url: $('#url').val().trim(),
+			data: $('#data').val().trim(),
+			contentType: "application/json"
+		})
+		.done(function(d){
+			//$('code').html(d);
+			$('code').html(JSON.stringify(d,null,'  '));
+			$('response').addClass('ok');
+		})
+		.fail(function(){
+			$('response').addClass('er');
+		})
+		.always(function(d){
+			//console.log(d);
+			//$('code').html(JSON.stringify(d,null,'  '));
+		});
+  
+  });
+  
+  </script>
+  
+  </body>
+</html>

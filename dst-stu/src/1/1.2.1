@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+path="$(cd ../../ && pwd)"
+
+echo 'digraph G {' > graph.dot
+jq -r '.friends[] | "	"+(.id | tostring)+" [shape=box,style=filled,color=\".7 .3 1\"];"' \
+"$path/d/friends.json" >> graph.dot
+jq -r '.friends[] | "	"+(.id | tostring)+" -> "+(.knows[] | tostring)+" [color=\".3 1 .7\"];"' \
+"$path/d/friends.json" >> graph.dot
+echo '}' >> graph.dot
+
+dot -Tsvg -o"graph.svg" graph.dot
+
+eog graph.svg

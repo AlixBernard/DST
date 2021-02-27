@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+path="$(cd ../../ && pwd)"
+
+awk -f "$path/src/csv-to-tree.awk" "$path/d/tre.csv" | tee tre.dot \
+&& dot -Tsvg -Kdot -o"tre.svg" "tre.dot" \
+&& eog "tre.svg"

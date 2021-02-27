@@ -1,0 +1,51 @@
+# Folder with divers resources
+Other
+
+# Data
+Game/*.csv
+
+syntax: glob
+
+# project specific
+
+# common
+
+.directory
+.dld
+.idea
+*.iml
+.vscode
+.pcs
+.run
+.tmp
+.tst
+.maps
+build/Release
+logs
+nbproject
+node_modules
+pids
+
+~*
+*~
+
+*.gz
+*.rar
+*.tar
+*.zip
+
+*.log
+!d/l1.log
+*.pid
+*.seed
+
+tst/ut-cov
+tst/basic-cocomo-*
+lcov.info
+lib-cov
+coverage
+
+.grunt
+.lock-wscript
+desktop.ini
+thumbs.db

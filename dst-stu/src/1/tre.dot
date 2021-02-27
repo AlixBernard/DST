@@ -1,0 +1,24 @@
+digraph G {
+	rankdir=BT;
+	edge [arrowhead=diamond];
+
+	n1 [label="Head Office"];
+	n2 [label="Novosibirsk"];
+	n3 [label="Berdsk"];
+	n4 [label="Sovetsky"];
+	n5 [label="Pervomaisky"];
+	n6 [label="Oktyabrsky"];
+	n7 [label="Verhnyaya Zone"];
+	n8 [label="Schya"];
+	n9 [label="Shlyuz"];
+
+	n2 -> n1;
+	n3 -> n1;
+	n4 -> n2;
+	n5 -> n2;
+	n6 -> n2;
+	n7 -> n4;
+	n8 -> n4;
+	n9 -> n4 ;
+
+}

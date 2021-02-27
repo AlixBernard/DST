@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+path="$(cd ../../ && pwd)"
+
+awk -f "$path/src/csv-to-tree.awk" "$path/d/tre.csv"

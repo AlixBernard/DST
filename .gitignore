@@ -1,6 +1,13 @@
 # Folder with divers resources
 Other
 
+# Presentations
+Lucene_Spatial_Index/*
+Mahout/*
+# But not the pdfs
+!Lucene_Spatial_Index/lucene_spatial_index.pdf
+!Mahout/mahout.pdf
+
 # Data
 Game/*.csv
 

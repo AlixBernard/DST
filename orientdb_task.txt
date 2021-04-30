@@ -1,0 +1,34 @@
+# Lines of code ran to perform the task on orientdb
+
+
+# Create classes, properties, and records
+create class Person if not exists extends V
+create property Person.name string
+create property Person.role string
+
+create vertex Person content {name:"Alix", role:"student"}
+create vertex Person content {name:"Denis", role:"teacher"}
+create vertex Person content {name:"Virgilio", role:"student"}
+create vertex Person content {name:"Zhanat", role:"administration"}
+
+create class Task extends E
+create class Grade extends E
+create class Report_grades extends E
+create edge Grade from (select from Person where name = "Alix") to (select from Person where name = "Denis")
+create edge Grade from (select from Person where name = "Virgilio") to (select from Person where name = "Denis")
+create edge Grade from (select from Person where name = "Denis") to (select from Person where name = "Alix")
+create edge Grade from (select from Person where name = "Denis") to (select from Person where name = "Virgilio")
+create edge Report_grades from (select from Person where name = "Alix") to (select from Person where name = "Zhanat")
+create edge Report_grades from (select from Person where name = "Virgilio") to (select from Person where name = "Zhanat")
+
+create class Records extends V
+create property Records.name string
+create vertex Records content {name:"Grades"}
+create class Store_data extends E
+create edge Store_data from (select from Person where name = "Zhanat") to (select from Records where name = "grades")
+
+
+# Search queries
+select from Person where name = "Alix"
+match {class: Person, as: pers, where: (role = "student")} return pers.name
+traverse * from Person while role = "student"

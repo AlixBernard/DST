@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{ML techniques}{6}{0}{2}
+\beamer@sectionintoc {3}{Features}{7}{0}{3}
+\beamer@sectionintoc {4}{Examples}{8}{0}{4}
+\beamer@sectionintoc {5}{Relevant links}{9}{0}{5}

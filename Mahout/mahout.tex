@@ -1,0 +1,219 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+	citecolor=black,
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{Apache Mahout} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{
+Alix Bernard
+} % Your name
+\institute % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Introduction} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+% \subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+\begin{frame}
+\frametitle{Introduction}
+\textbf{Mahout}: one who rides an elephant as its master.\\
+\vspace{1cm}
+Apache Mahout is an open-source project started in 2008; it is a \textbf{distributed linear algebra framework} used for \textbf{creating scalable machine learning algorithms}.
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction}
+The algorithms of Mahout are built on top of Hadoop and written in Java.\\
+\vspace{1cm}
+Apache Hadoop is an open-source framework allowing to \textbf{store and process big data in a distributed environment} across clusters of computers.
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction}
+Companies using Mahout include:
+\begin{itemize}
+	\item Adobe\\
+	\item Facebook\\
+	\item LinkedIn\\
+	\item Twitter\\
+	\item Yahoo
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+\section{ML techniques}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{ML techniques}
+Mahout is a project open to implementations of all kinds of machine learning techniques, in practice it focuses in three key areas of ML for now:
+\begin{itemize}
+	\item Recommendation\\
+	\item Classification\\
+	\item Clustering
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+\section{Features}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Features}
+Mahout features:
+\begin{itemize}
+	\item Works well in a distributed environment and uses Hadoop library to scale effectively.\\
+	\item Offers ready-to-use framework for data mining tasks on large volume of data.\\
+	\item Has applications to analyze large datasets effectively.\\
+	\item Includes several MapReduce enabled clustering implementations.\\
+	\item Supports Naive Bayes classification implementations.
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+\section{Examples}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Examples of Mahout uses}
+Mahout can be used for:
+\begin{itemize}
+	\item \textbf{Collaborative clustering}: mines user behavior and makes product recommendations.\\
+	\item \textbf{Clustering}: takes items in a class and organizes them into naturally occurring groups, such that items belonging to the same group are similar to each other.\\
+	\item \textbf{Classification}: learns from existing categorizations and then assigns unclassified items to the best category.\\
+	\item \textbf{Frequent itemset mining}: analyzes items in a group and then identifies which items typically appears together.
+\end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+\section{Relevant links}
+%------------------------------------------------
+
+\begin{frame}
+For more details and examples:
+\begin{thebibliography}{00}
+	\bibitem{b1} https://mahout.apache.org/
+	\bibitem{b2} https://www.tutorialspoint.com/mahout/
+	\bibitem{b3} https://www.acte.in/apache-mahout-tutorial/
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+	{\huge Thank you for your attention!}
+\end{center}
+\end{frame}
+%----------------------------------------------------------------------------------------
+
+\end{document} 

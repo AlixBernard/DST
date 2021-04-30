@@ -1,0 +1,13 @@
+Mahout
+
+
+I. Introduction
+
+Mahout: one who rides an elephant as its master.
+
+Apache Mahout is an open-source project started in 2008, now primarily used for creating scalable machine learning.
+
+# What companies use it
+# Runs on hadoop (and therefore java?)
+
+# Research hadoop workflow, mahout workflow, mahout examples, etc.

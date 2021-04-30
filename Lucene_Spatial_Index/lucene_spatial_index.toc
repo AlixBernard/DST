@@ -1,4 +1,0 @@
-\beamer@sectionintoc {1}{Main indexing methods}{3}{0}{1}
-\beamer@sectionintoc {2}{Spatial indexing}{4}{0}{2}
-\beamer@sectionintoc {3}{Lucene Spatial indexing}{7}{0}{3}
-\beamer@sectionintoc {4}{Relevant links}{8}{0}{4}

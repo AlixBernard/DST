@@ -4,15 +4,16 @@ Data Storage Technologies course
 
 ## Tasks
 
-- Task 1: dst-stu/src/1/  
-- Redis: redis/
+- Task 1: `dst-stu/src/1/`  
+- Redis: `redis/`
 - OrientDB:
-	- orientdb_task.txt
-	- cf. notes.pdf for install and details
+	- `orientdb_task.txt`
+	- _cf._ `notes.pdf` for install and details
 - Hadoop task:
-	- mapper.sh
-	- reducer.sh
-	- hadoop_task.mp4
+	- `mapper.sh`
+	- `reducer.sh`
+	- `hadoop_task.mp4`
+	- run it with Docker:
 	```bash
 	docker pull cloudera/quickstart:latest
 	docker run -m 6G --memory-reservation 2G --memory-swap 8G --hostname=quickstart.cloudera --privileged=true -t -i -v $(pwd):/alix --publish-all=true -p8888 -p8088 cloudera/quickstart /usr/bin/docker-quickstart
@@ -32,5 +33,5 @@ Data Storage Technologies course
 
 ## Presentations
 
-- Lucene Spatial Index: Lucene_Spatial_Index/lucene_spatial_index.pds
-- Apache Mahout: Mahout/mahout.pdf
+- Lucene Spatial Index: `Lucene_Spatial_Index/lucene_spatial_index.pdf`  
+- Apache Mahout: `Mahout/mahout.pdf`  
